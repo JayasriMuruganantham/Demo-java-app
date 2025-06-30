@@ -21,7 +21,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Unit tests ran with build'
+                echo '✅ Unit tests ran with build'
+            }
+        }
+
+        stage('Archive Artifact') {
+            steps {
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
     }
