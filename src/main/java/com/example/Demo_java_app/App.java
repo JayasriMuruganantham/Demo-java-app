@@ -5,6 +5,6 @@ package com.example.Demo_java_app;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello Jenkins CI/CD!");
+        System.out.println("Hello Jenkins Webhook CI/CD!");
     }
 }
