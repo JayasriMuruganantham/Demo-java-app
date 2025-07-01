@@ -29,22 +29,7 @@ pipeline {
             steps {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
-        
+        }
 
         stage('Deploy & Run') {
-            steps {
-                bat 'java -jar target\\Demo-java-app-0.0.1-SNAPSHOT.jar'
-            }
-        }
-
-    }
-
-    post {
-        success {
-            echo '✅ Build succeeded!'
-        }
-        failure {
-            echo '❌ Build failed!'
-        }
-    }
-}
+            s
