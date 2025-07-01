@@ -32,4 +32,18 @@ pipeline {
         }
 
         stage('Deploy & Run') {
-            s
+            steps {
+                bat 'java -jar target\\Demo-java-app-0.0.1-SNAPSHOT.jar'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Build succeeded!'
+        }
+        failure {
+            echo '❌ Build failed!'
+        }
+    }
+}
